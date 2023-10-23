@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  @extend %font-name-400;
+  @extend %source-400;
   color: $text;
   font-size: 16px;
   line-height: 1.5;
@@ -29,9 +29,22 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.wide-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 52px;
+  @extend %source-400;
+  color: var(--title);
+  line-height: normal;
 }
 
 button {
@@ -39,6 +52,38 @@ button {
   &:focus {
     outline: transparent;
     cursor: pointer;
+  }
+}
+
+.button {
+  padding: 17px 29px;
+  border-radius: 50px;
+  color: var(--white);
+  border: 1px solid var(--white);
+  cursor: pointer;
+  transition:
+    color 0.5s,
+    background-color 0.5s,
+    border-color 0.5s ease;
+
+  &--red {
+    background-color: var(--btn);
+
+    &:hover {
+      background-color: var(--white);
+      border-color: var(--btn);
+      color: var(--btn);
+    }
+  }
+
+  &--blue {
+    background-color: var(--light-blue);
+
+    &:hover {
+      background-color: var(--white);
+      border-color: var(--light-blue);
+      color: var(--light-blue);
+    }
   }
 }
 
@@ -63,15 +108,9 @@ textarea {
     outline: transparent;
   }
 
-  &:focus {
-    border: 1px solid #9cc0f9;
-  }
-
-  &:hover {
-    border: 1px solid yellow;
-  }
-
+  &:focus,
+  &:hover,
   &:active {
-    border: 1px solid yellowgreen;
+    border: 1px solid #9cc0f9;
   }
 }

@@ -4,8 +4,18 @@ $text: #4b4b4b;
 
 // ! Объявление CSS переменных
 :root {
-  --accent: #ed1c24;
-  --text: #4b4b4b;
+  --accent: #2378c9;
+  --menu: #302d2d;
+  --white: #fff;
+  --btn: #f86d6d;
+  --light-blue: #5eb8f0;
+  --bg: #dfeefc;
+  --footer-bg: #10406f;
+  --title: #302d2d;
+  --sometext: #c5c1fe;
+  --border: #e4e4e4;
+  --banner-bg: #0e6eaa;
+  --ring: #67a9e9;
 }
 // ! Использование CSS переменных
 .link__example {
@@ -58,9 +68,19 @@ $text: #4b4b4b;
 }
 
 // ! Шаблон для Шрифта
-%font-name-400 {
-  font-family: "font-name", sans-serif;
+%source-300 {
+  font-family: "SourceSansPro-Light", sans-serif;
+  font-weight: 300;
+}
+
+%source-400 {
+  font-family: "SourceSansPro-Regular", sans-serif;
   font-weight: 400;
+}
+
+%source-700 {
+  font-family: "SourceSansPro-Bold", sans-serif;
+  font-weight: 700;
 }
 // ! Использование шаблона
 // @extend %font-name-400;

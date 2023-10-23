@@ -1,7 +1,29 @@
 @font-face {
-  font-family: "font_name";
-  src: url("../fonts/font_name.woff2") format("woff2"), url("../fonts/font_name.woff") format("woff");
+  font-family: "SourceSansPro-Light";
+  src:
+    url("../fonts/SourceSansPro-Light.woff2") format("woff2"),
+    url("../fonts/SourceSansPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  src:
+    url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+    url("../fonts/SourceSansPro-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src:
+    url("../fonts/SourceSansPro-Bold.woff2") format("woff2"),
+    url("../fonts/SourceSansPro-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }

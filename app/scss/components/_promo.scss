@@ -1,0 +1,56 @@
+.promo {
+  padding: 100px 0;
+  background-color: var(--bg);
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 111px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--ring);
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__svg {
+    position: relative;
+    z-index: 55;
+  }
+
+  &__title {
+    width: 298px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}

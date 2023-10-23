@@ -1,0 +1,119 @@
+/* Модальный (фон) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 250px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  padding: 17px 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.logo__modal {
+  max-width: 90px;
+}
+
+.logo__modal-img {
+  max-width: 90px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 2px rgba(108, 108, 108, 0.25);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: var(--title);
+  text-align: center;
+
+  h2 {
+    color: var(--title);
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -250px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -250px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding-top: 18px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.modal__form {
+  padding: 0 28px;
+}
+
+.modal__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 17px 25px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal__inputs {
+  margin-bottom: 34px;
+}
+
+.modal-footer {
+  color: #747474;
+  padding-bottom: 34px;
+
+  p {
+    width: 280px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}
+
+.modal__btn {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
