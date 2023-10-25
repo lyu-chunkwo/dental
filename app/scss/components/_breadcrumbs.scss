@@ -1,0 +1,59 @@
+.bredcrumbs {
+  padding: 25px 0 29px;
+  text-align: center;
+  background-color: var(--bg);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+    padding-right: 15px;
+    position: relative;
+    font-size: 18px;
+
+    a {
+      color: var(--menu);
+    }
+
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:first-child {
+      a {
+        padding-left: 39px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url(../images/svg-sprite/sprite.svg#home);
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        pointer-events: none;
+      }
+
+      &::after {
+        display: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

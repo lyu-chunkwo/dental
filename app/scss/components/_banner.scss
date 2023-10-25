@@ -26,7 +26,7 @@
       width: 185px;
       height: 1px;
       background-color: #c5c1fe;
-      left: -195px;
+      left: -200px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -47,5 +47,7 @@
 
   &__btn {
     width: 255px;
+    border: none;
+    padding: 18px 30px;
   }
 }

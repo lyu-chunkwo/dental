@@ -1,0 +1,128 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--white);
+
+  &__inner {
+    padding: 68px 0 62px;
+    display: flex;
+  }
+
+  &__contacts {
+    padding-right: 114px;
+    position: relative;
+    max-width: 284px;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(180, 180, 180, 0.35);
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__logo-link {
+    margin-bottom: 81px;
+    display: block;
+  }
+
+  &__contacts-item {
+    address {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 24px;
+      font-size: 14px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 23px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../images/svg-sprite/sprite.svg#location);
+        background-size: cover;
+      }
+    }
+
+    &--tel {
+      padding-left: 27px;
+      position: relative;
+      margin-bottom: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../images/svg-sprite/sprite.svg#phone);
+        background-size: cover;
+      }
+    }
+
+    &--mail {
+      padding-left: 31px;
+      position: relative;
+      margin-bottom: 74px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 18px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../images/svg-sprite/sprite.svg#envelope);
+        background-size: cover;
+      }
+    }
+  }
+
+  &__contacts-link {
+    color: var(--white);
+  }
+
+  &__lists {
+    display: flex;
+    justify-content: space-between;
+    max-width: 915px;
+    width: 100%;
+    padding-left: 98px;
+  }
+
+  &__list-item {
+    color: var(--footer-text);
+    margin-bottom: 15px;
+
+    &:first-child {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 21px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-link {
+    color: var(--white);
+    transition: color 0.5s ease;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(180, 180, 180, 0.35);
+    text-align: center;
+    color: var(--copy-text);
+    padding: 37px 0;
+    @extend %source-300;
+  }
+}

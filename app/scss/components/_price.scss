@@ -42,6 +42,7 @@
   &__service {
     font-size: 18px;
     font-weight: 300;
+    @extend %source-300;
   }
 
   &__num {

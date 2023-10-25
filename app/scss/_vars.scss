@@ -16,6 +16,14 @@ $text: #4b4b4b;
   --border: #e4e4e4;
   --banner-bg: #0e6eaa;
   --ring: #67a9e9;
+  --news-bg: #f6f6f6;
+  --meta: #a9a9a9;
+  --placeholder: #b9b9b9;
+  --form-text: #747474;
+  --footer-text: #e0e0e0;
+  --copy-text: #c3c3c3;
+  --blog-border: #e2dfdf;
+  --specialists-subtitle: #56565e;
 }
 // ! Использование CSS переменных
 .link__example {
@@ -78,9 +86,19 @@ $text: #4b4b4b;
   font-weight: 400;
 }
 
+%source-600 {
+  font-family: "SourceSansPro-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
 %source-700 {
   font-family: "SourceSansPro-Bold", sans-serif;
   font-weight: 700;
+}
+
+%gilroy-400 {
+  font-family: "Gilroyregular", sans-serif;
+  font-weight: 400;
 }
 // ! Использование шаблона
 // @extend %font-name-400;

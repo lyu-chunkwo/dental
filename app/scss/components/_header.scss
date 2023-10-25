@@ -1,4 +1,6 @@
 .header {
+  margin-bottom: 99px;
+
   &__top {
     background-color: var(--accent);
     padding: 14px 0;
@@ -14,6 +16,7 @@
   &__local {
     padding-left: 30px;
     position: relative;
+    font-size: 14px;
 
     &::before {
       content: "";
@@ -76,10 +79,21 @@
   }
 
   &__menu-box {
+    padding: 26px 0 18px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 155;
+    width: 100%;
+  }
+
+  &__menu-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 0 18px;
   }
 
   &__menu-list {
@@ -91,11 +105,39 @@
     font-size: 18px;
     color: var(--menu);
   }
+
+  &__btn {
+    font-size: 14px;
+  }
 }
 
 .media {
   &__items {
     display: flex;
     gap: 31px;
+  }
+}
+
+.scroll-top {
+  &.hidden {
+    .header__menu-box {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-3000px);
+    }
+  }
+
+  &.appearance {
+    .header__menu-box {
+      visibility: visible;
+      transform: translateY(0%);
+      opacity: 1;
+      top: 0;
+      box-shadow:
+        0 10px 20px -12px rgba(133, 133, 133, 0.42),
+        0 3px 20px 0 rgb(0 0 0 / 12%),
+        0 8px 10px -5px rgb(0 0 0 / 20%);
+      transition: transform 0.8s ease 0s;
+    }
   }
 }

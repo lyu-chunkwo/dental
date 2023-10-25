@@ -38,7 +38,7 @@ function fonts() {
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(scss({ outputStyle: 'expanded' }))
     .pipe(webpCss())
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
@@ -96,13 +96,12 @@ function build() {
   return src([
     'app/**/*.html',
     'app/css/style.min.css',
-    'app/images/*.*',
+    'app/images/**/*.*',
     'app/images/svg-sprite/sprite.svg',
-    'app/images/ico/*.svg',
     'app/js/main.min.js',
     'app/fonts/*.woff',
     'app/fonts/*.woff2',
-    'app/favicon.png'
+    'app/favicon.webp'
   ], { base: 'app' })
     .pipe(dest('dist'));
 }
